@@ -22,15 +22,17 @@ This app presents a single **Spend Summary** experience: monthly spend overview,
 
 Simple, assignment-friendly layering (no over-engineering):
 
-| Layer | Responsibility |
-|-------|----------------|
-| **models/** | Plain data classes (`CategoryModel`, `TransactionModel`) |
-| **data/** | Mock data and computed insights |
-| **theme/** | Material 3 light & dark themes |
-| **screens/** | Screen layout and orchestration |
-| **widgets/** | Reusable UI components |
-| **utils/** | Formatting helpers |
-| **core/constants/** | Shared spacing and layout values |
+
+| Layer               | Responsibility                                           |
+| ------------------- | -------------------------------------------------------- |
+| **models/**         | Plain data classes (`CategoryModel`, `TransactionModel`) |
+| **data/**           | Mock data and computed insights                          |
+| **theme/**          | Material 3 light & dark themes                           |
+| **screens/**        | Screen layout and orchestration                          |
+| **widgets/**        | Reusable UI components                                   |
+| **utils/**          | Formatting helpers                                       |
+| **core/constants/** | Shared spacing and layout values                         |
+
 
 Data flows **top-down**: `DummyData` → widgets. The screen is the only `StatefulWidget` (refresh, animation keys, theme callbacks).
 
@@ -67,11 +69,31 @@ assets/
 
 ## Screenshots
 
-Add emulator screenshots to `assets/screenshots/` before submission, for example:
+## Screenshots
 
-- `spend_summary_light.png`
-- `spend_summary_dark.png`
-- `bottom_sheet.png`
+### Light Mode - Home
+
+![Light Home](assets/screenshots/light_mode/light_home.png)
+
+### Light Mode - Transactions
+
+![Light Transactions](assets/screenshots/light_mode/light_transactions.png)
+
+### Bottom Sheet
+
+![Bottom Sheet](assets/screenshots/light_mode/bottom_sheet.png)
+
+### Dark Mode - Home
+
+![Dark Home](assets/screenshots/dark_mode/dark_home.png)
+
+### Dark Mode - Transactions
+
+![Dark Transactions](assets/screenshots/dark_mode/dark_transactions.png)
+
+### Dark Mode - Bottom Sheet
+
+![Dark Bottom Sheet](assets/screenshots/dark_mode/bottom_sheet1.png)
 
 ## Run Instructions
 
@@ -97,10 +119,12 @@ flutter test
 
 ## AI Tools Used
 
-| Tool | How it was used |
-|------|-----------------|
-| **Cursor** | Primary IDE agent for architecture, widget implementation, theming, and refactors |
-| **ChatGPT** | Requirements analysis, UI/UX feedback, and documentation review |
+
+| Tool        | How it was used                                                                   |
+| ----------- | --------------------------------------------------------------------------------- |
+| **Cursor**  | Primary IDE agent for architecture, widget implementation, theming, and refactors |
+| **ChatGPT** | Requirements analysis, UI/UX feedback, and documentation review                   |
+
 
 **All generated code was reviewed, modified, and tested manually.**
 
